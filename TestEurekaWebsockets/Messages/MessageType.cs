@@ -2,6 +2,8 @@
 {
     public enum MessageType
     {
+        UNKNOWN,
+
         // Connection messages
         PHX_JOIN,
         PHX_REPLY,

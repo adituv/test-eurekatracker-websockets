@@ -3,7 +3,7 @@ namespace TestEurekaWebsockets.Messages
 {
     public class HeartbeatMessage : EurekaTrackerMessage
     {
-        public HeartbeatMessage(int? sequenceNumber, string target) : base(null, sequenceNumber, target)
+        public HeartbeatMessage(string target) : base(null, target)
         {
         }
 

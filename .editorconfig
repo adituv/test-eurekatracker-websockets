@@ -1,0 +1,8 @@
+﻿[*.{cs,vb}]
+
+# IDE0003: Remove qualification
+dotnet_style_qualification_for_field =true:warning
+
+[*.cs]
+csharp_style_var_when_type_is_apparent=true:suggestion
+csharp_style_var_for_built_in_types=false:silent

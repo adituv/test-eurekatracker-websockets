@@ -7,7 +7,7 @@ namespace TestEurekaWebsockets.Messages
         public string Status { get; init; }
         public override MessageType MessageType => MessageType.PHX_REPLY;
 
-        public PhxReplyMessage(int? trackerNumber, int? sequenceNumber, string target, string status) : base(trackerNumber,sequenceNumber,target)
+        public PhxReplyMessage(int? trackerNumber, string target, string status) : base(trackerNumber, target)
         {
             this.Status = status;
         }

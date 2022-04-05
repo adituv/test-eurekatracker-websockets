@@ -5,15 +5,14 @@ namespace TestEurekaWebsockets.Messages
 {
     public abstract class EurekaTrackerMessage
     {
-        public int? TrackerNumber { get; }
-        public int? SequenceNumber { get; }
+        public virtual int? TrackerNumber { get; }
+        public int? SequenceNumber { get; internal set; }
         public string Target { get; }
         public abstract MessageType MessageType { get; }
 
-        protected EurekaTrackerMessage(int? trackerNumber, int? sequenceNumber, string target)
+        protected EurekaTrackerMessage(int? trackerNumber, string target)
         {
             this.TrackerNumber = trackerNumber;
-            this.SequenceNumber = sequenceNumber;
             this.Target = target;
         }
 
@@ -30,7 +29,7 @@ namespace TestEurekaWebsockets.Messages
                 case "phx_reply":
                     return new PhxReplyMessage(rawMessage);
                 default:
-                    throw new Exception(string.Format("Unknown message type {0}", rawMessage.MessageId));
+                    return new UnknownTrackerMessage(rawMessage);
             }
         }
 

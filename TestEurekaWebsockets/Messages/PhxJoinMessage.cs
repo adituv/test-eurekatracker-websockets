@@ -4,11 +4,14 @@ namespace TestEurekaWebsockets.Messages
 {
     public class PhxJoinMessage : EurekaTrackerMessage
     {
+        // When joining a tracker, the current sequence number is used as a reference to the instance
+        public override int? TrackerNumber => this.SequenceNumber;
+
         public string Password { get; init; }
         public override MessageType MessageType => MessageType.PHX_JOIN;
 
-        public PhxJoinMessage(int trackerNumber, int sequenceNumber, string target, string password = null)
-            : base(trackerNumber, sequenceNumber, target)
+        public PhxJoinMessage(string target, string password = null)
+            : base(null, target)
         {
             this.Password = password;
         }

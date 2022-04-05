@@ -3,9 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestEurekaWebsockets", "TestEurekaWebsockets\TestEurekaWebsockets.csproj", "{34908F5B-4E28-4AC9-8DDC-2F0C7D7526EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestEurekaWebsockets", "TestEurekaWebsockets\TestEurekaWebsockets.csproj", "{34908F5B-4E28-4AC9-8DDC-2F0C7D7526EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestEurekaWebsocketsTests", "TestEurekaWebsocketsTests\TestEurekaWebsocketsTests.csproj", "{5A216021-CCF3-41D3-AB91-76E55505829B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestEurekaWebsocketsTests", "TestEurekaWebsocketsTests\TestEurekaWebsocketsTests.csproj", "{5A216021-CCF3-41D3-AB91-76E55505829B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{41291A92-3965-4BF0-9ECC-0AF0E9FC7715}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
